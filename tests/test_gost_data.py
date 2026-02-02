@@ -10,15 +10,14 @@
 Если количество уменьшится — тест тоже упадёт (нужно обновить пороги).
 
 Запуск:
-    python3 -m pytest test_gost_data.py -v
-    python3 -m unittest test_gost_data.py -v
+    python3 -m pytest tests/ -v
 """
 
 import math
 import sys
 import unittest
 
-from gost_54084_data import (
+from gost_54084 import (
     HEIGHTS,
     LOCATION_GRIDS,
     SEASONS,

@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gost-54084"
+version = "1.0.0"
+description = "Оцифрованные табличные данные ГОСТ Р 54084-2010 (модели атмосферы в пограничном слое, 0–3000 м)"
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.8"
+authors = [
+    { name = "Sergey Subbotin", email = "ssubbotin@gmail.com" },
+]
+keywords = ["ГОСТ", "атмосфера", "метеорология", "пограничный слой"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Science/Research",
+    "Programming Language :: Python :: 3",
+    "Topic :: Scientific/Engineering :: Atmospheric Science",
+]
+
+[tool.setuptools.package-dir]
+"" = "src"
+
+[tool.setuptools.packages.find]
+where = ["src"]

@@ -2,3 +2,6 @@ __pycache__/
 *.pyc
 pages/
 CLAUDE.md
+dist/
+build/
+*.egg-info/
