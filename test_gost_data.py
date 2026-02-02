@@ -160,12 +160,12 @@ class TestPhysicalRanges(unittest.TestCase):
     # Зафиксированное число нарушений по параметрам (значение1 + значение2)
     EXPECTED_VIOLATIONS = {
         "temperature":                0,
-        "pressure":                  32,     # перепутаны v1/v2, перевёрнутый порядок высот
+        "pressure":                  16,     # перевёрнутый порядок высот в отдельных локациях
         "density":                   76,     # σρ > 200 в (50,60), (60,120), (60,135) и т.д.
-        "scalar_wind_speed":          4,     # единичные OCR-ошибки
-        "zonal_wind_speed":           6,     # единичные OCR-ошибки
+        "scalar_wind_speed":          0,
+        "zonal_wind_speed":           0,
         "meridional_wind_speed":      0,
-        "resultant_wind":            15,     # (75,90) перепутаны с другим параметром
+        "resultant_wind":             0,
         "specific_humidity":          0,
         "relative_humidity_dewpoint": 9,     # (65,-170) autumn — перепутаны Dp/RH
     }
