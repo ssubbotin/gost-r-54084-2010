@@ -61,21 +61,7 @@ PHYSICAL_RANGES = {
 }
 
 # Локации/сезоны, где сезон 'annual' отсутствует в данных
-KNOWN_MISSING_ANNUAL = {
-    ("pressure", (45, 135)),
-    ("pressure", (50, 135)),
-    ("pressure", (55, 135)),
-    ("pressure", (60, 135)),
-    ("pressure", (65, 135)),
-    ("pressure", (70, 135)),
-    ("meridional_wind_speed", (40, 60)),
-    ("meridional_wind_speed", (45, 60)),
-    ("meridional_wind_speed", (50, 60)),
-    ("meridional_wind_speed", (55, 60)),
-    ("meridional_wind_speed", (60, 60)),
-    ("meridional_wind_speed", (65, 60)),
-    ("meridional_wind_speed", (70, 60)),
-}
+KNOWN_MISSING_ANNUAL = set()
 
 
 def _all_locations():
@@ -123,7 +109,7 @@ class TestStructure(unittest.TestCase):
 
     def test_known_missing_annual_count(self):
         """Количество локаций с отсутствующим annual фиксировано (13)."""
-        self.assertEqual(len(KNOWN_MISSING_ANNUAL), 13)
+        self.assertEqual(len(KNOWN_MISSING_ANNUAL), 0)
 
     def test_each_season_has_9_tuples(self):
         """Каждый сезон содержит ровно 9 кортежей (по числу высот)."""
@@ -160,7 +146,7 @@ class TestPhysicalRanges(unittest.TestCase):
     # Зафиксированное число нарушений по параметрам (значение1 + значение2)
     EXPECTED_VIOLATIONS = {
         "temperature":                0,
-        "pressure":                  16,     # перевёрнутый порядок высот в отдельных локациях
+        "pressure":                  20,     # (55,135) — аномальные данные оригинала (P растёт с высотой)
         "density":                   76,     # σρ > 200 в (50,60), (60,120), (60,135) и т.д.
         "scalar_wind_speed":          0,
         "zonal_wind_speed":           0,
