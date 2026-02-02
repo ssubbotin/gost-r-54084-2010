@@ -36,7 +36,7 @@ Parameters and their value tuples:
     relative_humidity_dewpoint: (RH [%],    Dp [°C])
 
 Usage example:
-    from gost_54084_data import temperature, HEIGHTS
+    from gost_54084 import temperature, HEIGHTS
 
     # Get winter temperature profile at 55°N, 30°E
     profile = temperature[(55, 30)]["winter"]

@@ -341,7 +341,7 @@ def write_python_module(all_data, output_path):
         f.write("    specific_humidity:          (q [g/kg],  σq [g/kg])\n")
         f.write("    relative_humidity_dewpoint: (RH [%],    Dp [°C])\n\n")
         f.write("Usage example:\n")
-        f.write("    from gost_54084_data import temperature, HEIGHTS\n\n")
+        f.write("    from gost_54084 import temperature, HEIGHTS\n\n")
         f.write("    # Get winter temperature profile at 55°N, 30°E\n")
         f.write('    profile = temperature[(55, 30)]["winter"]\n')
         f.write("    for h, (t, sigma_t) in zip(HEIGHTS, profile):\n")
@@ -439,7 +439,7 @@ def main():
     all_data, warnings = build_data_module()
     validate_data(all_data)
 
-    output_path = "gost_54084_data.py"
+    output_path = "src/gost_54084/data.py"
     write_python_module(all_data, output_path)
 
     # Quick sanity check: print a sample profile
