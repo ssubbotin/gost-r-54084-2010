@@ -342,7 +342,7 @@ class TestNoneValues(unittest.TestCase):
 
     def test_none_count_reasonable(self):
         """Количество кортежей с None не превышает ожидаемого порога."""
-        max_expected = 200
+        max_expected = 0
         count = 0
         for name, param in ALL_PARAMETERS.items():
             for loc, seasons_data in param.items():
