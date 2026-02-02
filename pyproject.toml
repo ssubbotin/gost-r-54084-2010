@@ -7,7 +7,7 @@ name = "gost-54084"
 version = "1.0.0"
 description = "Оцифрованные табличные данные ГОСТ Р 54084-2010 (модели атмосферы в пограничном слое, 0–3000 м)"
 readme = "README.md"
-license = "MIT"
+license = {text = "MIT"}
 requires-python = ">=3.8"
 authors = [
     { name = "Sergey Subbotin", email = "ssubbotin@gmail.com" },
@@ -19,6 +19,10 @@ classifiers = [
     "Programming Language :: Python :: 3",
     "Topic :: Scientific/Engineering :: Atmospheric Science",
 ]
+
+[project.urls]
+Homepage = "https://github.com/ssubbotin/gost-r-54084-2010"
+Repository = "https://github.com/ssubbotin/gost-r-54084-2010"
 
 [tool.setuptools.package-dir]
 "" = "src"

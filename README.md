@@ -7,10 +7,10 @@
 ## Установка
 
 ```bash
-pip install git+https://github.com/ssubbotin/gost-r-54084-2010.git
+pip install gost-54084
 ```
 
-Для разработки из исходников:
+Или из исходников:
 
 ```bash
 git clone https://github.com/ssubbotin/gost-r-54084-2010.git
